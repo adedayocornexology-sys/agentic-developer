@@ -138,6 +138,21 @@
   .lst li .ic{flex:none;font-family:var(--mono);color:var(--accent);margin-top:.05em}
   .card.no .lst li .ic{color:var(--faint)}
 
+  /* ---------- instructor / credentials ---------- */
+  .instructor-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px;border:1px solid var(--line);border-radius:var(--r);padding:clamp(22px,3vw,30px);background:var(--bg-2);margin-bottom:18px}
+  .instructor-head .iname{font-family:var(--display);font-size:clamp(1.3rem,3.4vw,1.75rem);font-weight:560}
+  .instructor-head .irole{color:var(--muted);font-size:.76rem;letter-spacing:.02em;margin-top:7px;line-height:1.55;max-width:46ch}
+  .instructor-head .btn{flex:none}
+  .creds{display:grid;grid-template-columns:1fr;gap:14px}
+  @media (min-width:720px){.creds{grid-template-columns:repeat(3,1fr);gap:16px}}
+  .cred{display:flex;flex-direction:column;gap:10px;border:1px solid var(--line);border-radius:14px;padding:22px;background:var(--bg-2);transition:border-color .22s,transform .22s,background .22s}
+  .cred:hover{border-color:var(--accent);transform:translateY(-3px);background:linear-gradient(180deg,rgba(255,107,61,.06),var(--bg-2))}
+  .cred-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+  .cred .issuer{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+  .cred .vrf{font-family:var(--mono);font-size:.72rem;color:var(--good);display:inline-flex;gap:.35em;align-items:center}
+  .cred-name{font-family:var(--display);font-weight:520;font-size:1.06rem;line-height:1.25}
+  .cred-date{font-family:var(--mono);font-size:.72rem;color:var(--faint)}
+
   /* ---------- curriculum timeline ---------- */
   .track{position:relative;padding-left:clamp(16px,4vw,30px);margin-top:8px}
   .track::before{content:"";position:absolute;left:0;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--accent),rgba(255,107,61,.15))}
@@ -225,6 +240,7 @@
     <a class="brand" href="#top"><span class="dot"></span><b>agentic-developer</b></a>
     <nav class="nav-links">
       <a class="lnk" href="#shift">The shift</a>
+      <a class="lnk" href="#instructor">Instructor</a>
       <a class="lnk" href="#curriculum">Curriculum</a>
       <a class="lnk" href="#pricing">Pricing</a>
       <a class="btn btn-primary" href="#pricing">Enroll →</a>
@@ -246,9 +262,9 @@
           <a class="btn btn-ghost" href="#curriculum">See the curriculum</a>
         </div>
         <div class="hero-meta fade-up d5">
+          <span>Anthropic-certified instructor</span>
           <span>6 weeks, fully remote</span>
           <span>Labs on your own repo</span>
-          <span>"Ship It" guarantee</span>
         </div>
       </div>
 
@@ -328,6 +344,45 @@
             <li><span class="ic">×</span> You're not willing to do the labs on your own repo</li>
           </ul>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="divider"></div></div>
+
+  <!-- INSTRUCTOR / CREDENTIALS -->
+  <section id="instructor">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow">// your instructor</div>
+        <h2>Taught by an <span class="serif-it">Anthropic-certified</span> MCP builder.</h2>
+        <p>This isn't theory from someone who skimmed the docs. You're learning from a practitioner certified by Anthropic in the exact tools the course covers — verify every credential below.</p>
+      </div>
+
+      <div class="instructor-head reveal">
+        <div>
+          <div class="iname">Cornelius Aderinboye</div>
+          <div class="irole">Post-AI Specialist · Claude &amp; MCP Tool Builder · AI Workflow Designer · LLM Automation Architect</div>
+        </div>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/cornelius-aderinboye-6767ab154/" target="_blank" rel="noopener">Verify on LinkedIn →</a>
+      </div>
+
+      <div class="creds">
+        <a class="cred reveal" href="https://verify.skilljar.com/c/eizft9fk4n9n" target="_blank" rel="noopener">
+          <div class="cred-top"><span class="issuer">Anthropic Education</span><span class="vrf">Verify ✓</span></div>
+          <div class="cred-name">Introduction to Model Context Protocol</div>
+          <div class="cred-date">Issued Jul 2025</div>
+        </a>
+        <a class="cred reveal" href="https://verify.skilljar.com/c/w93vwxxv5v9i" target="_blank" rel="noopener">
+          <div class="cred-top"><span class="issuer">Anthropic Education</span><span class="vrf">Verify ✓</span></div>
+          <div class="cred-name">Model Context Protocol: Advanced Topics</div>
+          <div class="cred-date">Issued Jul 2025</div>
+        </a>
+        <a class="cred reveal" href="https://www.linkedin.com/in/cornelius-aderinboye-6767ab154/" target="_blank" rel="noopener">
+          <div class="cred-top"><span class="issuer">Anthropic Academy</span><span class="vrf">View ✓</span></div>
+          <div class="cred-name">AI Fluency for Small Businesses</div>
+          <div class="cred-date">View on LinkedIn</div>
+        </a>
       </div>
     </div>
   </section>
